@@ -1,0 +1,33 @@
+class Pair {
+    long min;
+    long max;
+    
+    public Pair(long min, long max) {
+        this.min = min;
+        this.max = max;
+    }
+}
+
+class Solution {
+    static Pair getMinMax(long a[], long n) {
+        long min = a[0];
+        long max = a[0];
+        
+        for(int i = 1; i < n; i++) {
+            if(a[i] > max)
+                max = a[i];
+            else if(a[i] < min)
+                min = a[i];
+        }
+        
+        return new Pair(min, max);
+    }
+    
+    public static void main(String[] args) {
+        long[] A = {1, 345, 234, 21, 56789};
+        int n = A.length;
+        Pair result = getMinMax(A, n);
+        System.out.println("Minimum element: " + result.min);
+        System.out.println("Maximum element: " + result.max);
+    }
+}
