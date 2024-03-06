@@ -1,8 +1,6 @@
 class Reverse
 {
-    // Complete the function
-    // str: input string
-    public static String reverseWord(String str)
+     public static String reverseWord(String str)
     {  
         String str1="";
         int len=str.length();
